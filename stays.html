@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b1c">
+  <meta name="description" content="Find your room at Māhira House: intimate heritage rooms, lake-facing suites and generous spaces for the whole family.">
+  <title>Rooms & Suites — Māhira House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="stays">
+  <main>
+    <section class="page-hero page-hero--split">
+      <div class="page-hero__copy">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> STAYS AT MĀHIRA</p>
+        <h1>Rest comes<br><em>naturally here.</em></h1>
+        <p>Spaces with a sense of history, a view worth waking for, and all the room your day needs.</p>
+        <a class="text-link text-link--light" href="#the-rooms">Find your room <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="page-hero__visual"><img src="public/images/pichola-suite.webp" alt="An elegant heritage suite with a jharokha window looking toward the lake" fetchpriority="high"><span class="page-hero__image-caption">THE PICHOLA SUITE · 86 M²</span></div>
+    </section>
+
+    <section class="section section-room-list" id="the-rooms">
+      <div class="container">
+        <div class="section-heading section-heading--split reveal">
+          <div><p class="eyebrow"><span class="eyebrow__line"></span> FIND YOUR FIT</p><h2>Choose a view.<br><em>Make it yours.</em></h2></div>
+          <div class="section-heading__aside"><p>Three distinct ways to stay, all shaped around the same feeling: a little more ease. Looking for space for the family? We’ll help you find it.</p></div>
+        </div>
+        <div class="room-filters reveal" data-room-filters>
+          <label><span>VIEW</span><select data-filter-view aria-label="Filter rooms by view"><option value="all">All views</option><option value="lake">Lake view</option><option value="courtyard">Courtyard view</option></select></label>
+          <label><span>BED CONFIGURATION</span><select data-filter-bed aria-label="Filter rooms by bed configuration"><option value="all">All beds</option><option value="king">King bed</option><option value="twin">Twin beds</option><option value="family">Family configuration</option></select></label>
+          <p data-room-count aria-live="polite">Showing 3 stays</p>
+        </div>
+        <div class="room-grid" data-room-grid>
+          <article class="room-card reveal" data-view="lake" data-bed="king">
+            <div class="room-card__photo"><img src="public/images/pichola-suite.webp" alt="The Pichola Suite with a hand-carved bed and lake-facing jharokha" loading="lazy"><span class="room-card__index">01 / 03</span><span class="room-card__view">LAKE VIEW</span></div>
+            <div class="room-card__body">
+              <div class="room-card__top"><div><p class="eyebrow">A LITTLE MORE ROOM</p><h3>The Pichola Suite</h3></div><span class="room-card__size">86 m²</span></div>
+              <p class="room-card__description">A private sitting room, a carved stone balcony and the lake changing colour just beyond your window.</p>
+              <div class="room-features"><span>King bed</span><span>Up to 3 guests</span><span>Lake-facing balcony</span></div>
+              <div class="room-card__actions"><button class="text-link" type="button" data-open-floorplan data-room-name="The Pichola Suite" data-room-size="86 m²" data-plan="suite">View floorplan <span aria-hidden="true">↗</span></button><button class="button button--dark" type="button" data-open-booking data-room-name="The Pichola Suite">Request this room <span aria-hidden="true">↗</span></button></div>
+              <div class="room-card__rate"><span>From</span><strong>₹42,000</strong><span>/ night</span></div>
+            </div>
+          </article>
+
+          <article class="room-card reveal reveal--late" data-view="courtyard" data-bed="twin">
+            <div class="room-card__photo"><img src="public/images/suite-jharokha.webp" alt="The Jharokha Room with calm neutral textiles and a carved window" loading="lazy"><span class="room-card__index">02 / 03</span><span class="room-card__view">COURTYARD VIEW</span></div>
+            <div class="room-card__body">
+              <div class="room-card__top"><div><p class="eyebrow">A QUIET CORNER</p><h3>The Jharokha Room</h3></div><span class="room-card__size">58 m²</span></div>
+              <p class="room-card__description">An intimate hideaway with a deep window seat, soft morning light and your choice of twin or king bedding.</p>
+              <div class="room-features"><span>Twin or king</span><span>Up to 2 guests</span><span>Accessible option</span></div>
+              <div class="room-card__actions"><button class="text-link" type="button" data-open-floorplan data-room-name="The Jharokha Room" data-room-size="58 m²" data-plan="room">View floorplan <span aria-hidden="true">↗</span></button><button class="button button--dark" type="button" data-open-booking data-room-name="The Jharokha Room">Request this room <span aria-hidden="true">↗</span></button></div>
+              <div class="room-card__rate"><span>From</span><strong>₹31,000</strong><span>/ night</span></div>
+            </div>
+          </article>
+
+          <article class="room-card reveal reveal--later" data-view="courtyard" data-bed="family">
+            <div class="room-card__photo"><img src="public/images/courtyard-pool.webp" alt="A peaceful inner courtyard at Māhira House" loading="lazy"><span class="room-card__index">03 / 03</span><span class="room-card__view">COURTYARD VIEW</span></div>
+            <div class="room-card__body">
+              <div class="room-card__top"><div><p class="eyebrow">ROOM FOR EVERYONE</p><h3>The Haveli Residence</h3></div><span class="room-card__size">118 m²</span></div>
+              <p class="room-card__description">Two connected bedrooms, a shared living room and thoughtful details for travelling with little ones or elders.</p>
+              <div class="room-features"><span>King + twin</span><span>Up to 5 guests</span><span>Interconnecting rooms</span></div>
+              <div class="room-card__actions"><button class="text-link" type="button" data-open-floorplan data-room-name="The Haveli Residence" data-room-size="118 m²" data-plan="residence">View floorplan <span aria-hidden="true">↗</span></button><button class="button button--dark" type="button" data-open-booking data-room-name="The Haveli Residence">Request this room <span aria-hidden="true">↗</span></button></div>
+              <div class="room-card__rate"><span>From</span><strong>₹58,000</strong><span>/ night</span></div>
+            </div>
+          </article>
+        </div>
+        <p class="rate-disclaimer">Rates shown are illustrative starting rates in INR for this website preview. Final pricing and availability are confirmed by the reservations team.</p>
+      </div>
+    </section>
+
+    <section class="family-note">
+      <div class="container family-note__inner reveal">
+        <div class="family-note__icon" aria-hidden="true">✳</div>
+        <div><p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> TRAVELLING TOGETHER</p><h2>Good trips make<br><em>room for everyone.</em></h2></div>
+        <p>Connecting rooms, child-friendly meal times, lift access and a little extra help for older guests can be arranged. Tell us what would make your stay easier.</p>
+        <button class="button button--outline-light" type="button" data-open-booking data-room-name="Family stay">Plan a family stay <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+  </main>
+  <script src="scripts/site.js"></script>
+</body>
+</html>

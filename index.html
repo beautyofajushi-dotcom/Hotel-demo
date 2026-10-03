@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b1c">
+  <meta name="description" content="A private lakeside palace in Udaipur. Discover thoughtful stays, slow rituals and celebrations at Māhira House.">
+  <title>Māhira House — A private palace on Pichola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <main>
+    <section class="hero hero-home" aria-labelledby="home-title">
+      <img class="hero__image" src="public/images/pichola-palace-dawn.webp" alt="A palace reflected in the quiet waters of Lake Pichola at dawn" fetchpriority="high">
+      <div class="hero__shade"></div>
+      <div class="hero__copy container">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> A PRIVATE PALACE · UDAIPUR</p>
+        <h1 id="home-title">Where the lake<br><em>slows time.</em></h1>
+        <p class="hero__description">A storied house on the quiet edge of Pichola, made for finding your own rhythm.</p>
+        <a class="text-link text-link--light" href="#the-house">Discover the house <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero__coordinates" aria-hidden="true">24°34′ N &nbsp; 73°41′ E</div>
+      <a class="hero__scroll" href="#the-house" aria-label="Scroll to discover Māhira House"><span></span> SCROLL TO DISCOVER</a>
+      <div class="hero__caption">A different kind of arrival.</div>
+    </section>
+
+    <div class="availability-wrap container">
+      <form class="availability-bar" data-availability-form>
+        <div class="availability-bar__intro"><span class="availability-bar__mark">M</span><span><b>Make time for Māhira</b><small>Find your dates by the lake</small></span></div>
+        <label class="booking-field"><span>ARRIVAL</span><input name="arrival" type="date" data-availability-arrival required aria-label="Arrival date"></label>
+        <label class="booking-field"><span>DEPARTURE</span><input name="departure" type="date" data-availability-departure required aria-label="Departure date"></label>
+        <label class="booking-field booking-field--guests"><span>GUESTS</span><select name="guests" aria-label="Number of guests"><option value="2">2 guests</option><option value="1">1 guest</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option></select></label>
+        <button class="button button--dark availability-bar__submit" type="submit">Check availability <span aria-hidden="true">↗</span></button>
+      </form>
+    </div>
+
+    <section class="section section-house" id="the-house">
+      <div class="container house-layout">
+        <div class="house-copy reveal">
+          <p class="eyebrow"><span class="eyebrow__line"></span> THE ART OF ARRIVING</p>
+          <h2>A house with<br>its own <em>slow rhythm.</em></h2>
+          <p class="body-copy">Behind an old stone archway, the city softens. Sun-warmed courtyards, rooms shaped by hand and a lake that changes colour by the hour—Māhira is an invitation to stay a little longer.</p>
+          <a class="text-link" href="experiences.html">The Māhira story <span aria-hidden="true">↗</span></a>
+          <div class="house-stats" aria-label="A few details about the house">
+            <div><strong>18</strong><span>considered rooms</span></div>
+            <div><strong>03</strong><span>quiet courtyards</span></div>
+            <div><strong>01</strong><span>private lake ghat</span></div>
+          </div>
+        </div>
+        <div class="house-image-wrap reveal reveal--late">
+          <img class="house-image" src="public/images/courtyard-pool.webp" alt="A still courtyard pool framed by carved sandstone arches" loading="lazy">
+          <div class="image-note"><span>01 / 04</span><span>THE INNER COURTYARD</span></div>
+          <span class="house-image-stamp" aria-hidden="true">M</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-experiences" aria-labelledby="experiences-title">
+      <div class="container">
+        <div class="section-heading section-heading--split reveal">
+          <div>
+            <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> MAKE A DAY OF IT</p>
+            <h2 id="experiences-title">The best moments<br>are <em>unhurried.</em></h2>
+          </div>
+          <div class="section-heading__aside"><p>Follow the light, the scent of cardamom, or simply your own curiosity. We’ll take care of the rest.</p><a class="text-link text-link--light" href="experiences.html">All experiences <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="experience-rail" data-carousel>
+          <article class="experience-card reveal">
+            <a class="experience-card__image" href="experiences.html#lake" aria-label="Discover a first-light sail on Lake Pichola"><img src="public/images/pichola-palace-dawn.webp" alt="The first light rising over Lake Pichola" loading="lazy"><span class="experience-card__number">01</span></a>
+            <div class="experience-card__meta"><span>ON THE WATER</span><span>2 HOURS</span></div>
+            <h3>A sail before<br>the city wakes</h3>
+            <a href="experiences.html#lake" class="circle-arrow" aria-label="Learn about the first-light sail">↗</a>
+          </article>
+          <article class="experience-card reveal reveal--late">
+            <a class="experience-card__image" href="dining.html" aria-label="Discover a private dinner at Māhira"><img src="public/images/mewari-vegetarian-table.webp" alt="A beautifully set Mewari vegetarian dinner" loading="lazy"><span class="experience-card__number">02</span></a>
+            <div class="experience-card__meta"><span>AT THE TABLE</span><span>BY ARRANGEMENT</span></div>
+            <h3>A table set<br>just for you</h3>
+            <a href="dining.html" class="circle-arrow" aria-label="Explore dining at Māhira">↗</a>
+          </article>
+          <article class="experience-card reveal reveal--later">
+            <a class="experience-card__image" href="experiences.html#rituals" aria-label="Discover the slow rituals of the house"><img src="public/images/suite-jharokha.webp" alt="Morning light falling into a peaceful palace suite" loading="lazy"><span class="experience-card__number">03</span></a>
+            <div class="experience-card__meta"><span>IN THE HOUSE</span><span>YOUR OWN PACE</span></div>
+            <h3>Small rituals,<br>lasting memories</h3>
+            <a href="experiences.html#rituals" class="circle-arrow" aria-label="Explore rituals at Māhira">↗</a>
+          </article>
+        </div>
+        <div class="rail-controls"><span>CURATED FOR YOU</span><div><button type="button" class="rail-arrow" data-carousel-prev aria-label="Scroll experiences left">←</button><button type="button" class="rail-arrow" data-carousel-next aria-label="Scroll experiences right">→</button></div></div>
+      </div>
+    </section>
+
+    <section class="section section-rooms" aria-labelledby="rooms-title">
+      <div class="container">
+        <div class="section-heading section-heading--split reveal">
+          <div><p class="eyebrow"><span class="eyebrow__line"></span> STAYS AT MĀHIRA</p><h2 id="rooms-title">A room for<br><em>your kind of quiet.</em></h2></div>
+          <div class="section-heading__aside"><p>Every suite holds a different view of the house. Each one gives you a little more room to breathe.</p><a class="text-link" href="stays.html">Explore rooms & suites <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="room-preview-grid">
+          <article class="room-preview room-preview--large reveal">
+            <a href="stays.html" class="room-preview__image"><img src="public/images/pichola-suite.webp" alt="A lake-facing suite with carved timber details" loading="lazy"><span class="room-preview__label">01 — LAKE VIEW</span></a>
+            <div class="room-preview__details"><div><h3>The Pichola Suite</h3><p>86 m² · King bed · Up to 3 guests</p></div><a class="circle-arrow circle-arrow--light" href="stays.html" aria-label="Explore The Pichola Suite">↗</a></div>
+          </article>
+          <article class="room-preview reveal reveal--late">
+            <a href="stays.html" class="room-preview__image"><img src="public/images/suite-jharokha.webp" alt="An intimate heritage suite with a jharokha window" loading="lazy"><span class="room-preview__label">02 — COURTYARD VIEW</span></a>
+            <div class="room-preview__details"><div><h3>The Jharokha Room</h3><p>58 m² · Twin or king · Up to 2 guests</p></div><a class="circle-arrow circle-arrow--light" href="stays.html" aria-label="Explore The Jharokha Room">↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="celebration-feature" aria-labelledby="celebration-title">
+      <img src="public/images/courtyard-celebration.webp" alt="A candlelit palace courtyard prepared for an intimate celebration" loading="lazy">
+      <div class="celebration-feature__shade"></div>
+      <div class="container celebration-feature__content reveal">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> YOUR DAY, YOUR WAY</p>
+        <h2 id="celebration-title">A gathering<br>worth <em>remembering.</em></h2>
+        <p>From a mehendi beneath the jharokhas to a moonlit reception by the lake, make the house part of your story.</p>
+        <a class="button button--outline-light" href="celebrations.html">Celebrate at Māhira <span aria-hidden="true">↗</span></a>
+      </div>
+      <span class="celebration-feature__caption">THE CHHATRI COURTYARD · UDAIPUR</span>
+    </section>
+
+    <section class="section section-dining" aria-labelledby="dining-title">
+      <div class="container dining-layout">
+        <div class="dining-image reveal"><img src="public/images/mewari-vegetarian-table.webp" alt="A seasonal vegetarian Mewari meal served on a brass thali" loading="lazy"><span class="dining-image__seal">FROM<br>OUR<br>LAND</span></div>
+        <div class="dining-copy reveal reveal--late">
+          <p class="eyebrow"><span class="eyebrow__line"></span> A TASTE OF MEWAR</p>
+          <h2>Good things<br>take <em>their time.</em></h2>
+          <p class="body-copy">Recipes passed between generations, vegetables from nearby farms, and a table that always has room for one more. Our kitchen is entirely vegetarian, with thoughtful Jain options on request.</p>
+          <div class="dietary-legend"><span><i class="diet-dot diet-dot--green"></i> Pure vegetarian</span><span><i class="diet-dot diet-dot--gold"></i> Jain friendly</span></div>
+          <a class="text-link" href="dining.html">At the Māhira table <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-note">
+      <div class="container closing-note__inner reveal">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> THE CITY CAN WAIT</p>
+        <h2>Come as you are.<br><em>Leave a little slower.</em></h2>
+        <button class="button button--gold" type="button" data-open-booking>Begin your stay <span aria-hidden="true">↗</span></button>
+        <span class="closing-note__ornament" aria-hidden="true">✳</span>
+      </div>
+    </section>
+  </main>
+  <script src="scripts/site.js"></script>
+</body>
+</html>
