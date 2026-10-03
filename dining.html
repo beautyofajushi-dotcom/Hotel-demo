@@ -3,77 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101b1c">
-  <meta name="description" content="Explore seasonal Mewari cooking, all-day favourites and a leisurely afternoon tea at the vegetarian Māhira House table.">
-  <title>Dining — Māhira House</title>
+  <meta name="theme-color" content="#25151f">
+  <meta name="description" content="Vegetarian home cooking, Braj favourites and chai at the family table at Aangan House in Mathura.">
+  <title>The Table — Aangan House</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="dining">
   <main>
-    <section class="page-hero page-hero--split page-hero--food">
+    <section class="page-hero page-hero--split page-hero--table">
       <div class="page-hero__copy">
-        <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> DINING AT MĀHIRA</p>
-        <h1>A table with<br><em>a sense of place.</em></h1>
-        <p>Old Mewari recipes, a generous vegetarian kitchen and ingredients that follow the seasons.</p>
-        <a class="text-link text-link--light" href="#the-menu">Explore the menu <span aria-hidden="true">↓</span></a>
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span> THE AANGAN TABLE</p>
+        <h1>Made at home.<br><em>Shared with you.</em></h1>
+        <p>Seasonal vegetarian cooking, family recipes and the easy pleasure of one more helping.</p>
+        <a class="button button--saffron" href="#menu">See what’s cooking <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="page-hero__visual"><img src="public/images/mewari-vegetarian-table.webp" alt="Seasonal Mewari vegetarian dishes served on a brass thali" fetchpriority="high"><span class="page-hero__image-caption">THE MEWARI TABLE · ALL VEGETARIAN</span></div>
+      <div class="page-hero__visual" data-parallax><img src="public/images/aangan-table.webp" alt="A fresh vegetarian Braj thali served on the courtyard table" fetchpriority="high"><span class="page-hero__caption">FRESH FROM OUR FAMILY KITCHEN</span></div>
     </section>
 
-    <section class="section dining-intro">
-      <div class="container dining-intro__grid">
-        <div class="dining-intro__seal reveal"><span>100%</span><small>PURE<br>VEGETARIAN</small><i aria-hidden="true">✳</i></div>
-        <div class="reveal reveal--late"><p class="eyebrow"><span class="eyebrow__line"></span> MADE WITH CARE, SERVED WITH HEART</p><h2>Food that brings<br><em>everyone to the table.</em></h2><p class="body-copy">Our kitchen is rooted in the flavours of Mewar and open to the world. Expect vegetables picked close to home, recipes made slowly and Jain preparations that never feel like an afterthought.</p><div class="dietary-legend"><span><i class="diet-dot diet-dot--green"></i> 100% vegetarian</span><span><i class="diet-dot diet-dot--gold"></i> Jain option</span><span><i class="diet-dot diet-dot--olive"></i> Seasonal / organic</span></div></div>
+    <section class="section table-intro">
+      <div class="container table-intro__grid">
+        <div class="vegetarian-seal reveal"><span>100%</span><small>PURE<br>VEGETARIAN</small><i aria-hidden="true">✳</i></div>
+        <div class="reveal reveal--delay"><p class="eyebrow"><span class="eyebrow__rule"></span> COME HUNGRY, LEAVE HAPPY</p><h2>The best recipes<br>are <em>the ones we share.</em></h2><p class="body-copy">Food at Aangan is not a performance. It’s what’s in season, what the family has always made and what feels right for the day. Jain meals can be arranged when we know in advance.</p><div class="diet-key"><span><i class="food-dot food-dot--green"></i> Pure vegetarian</span><span><i class="food-dot food-dot--amber"></i> Jain on request</span><span><i class="food-dot food-dot--rose"></i> Seasonal</span></div></div>
       </div>
     </section>
 
-    <section class="menu-section" id="the-menu">
+    <section class="menu-section" id="menu">
       <div class="container">
-        <div class="section-heading section-heading--split reveal"><div><p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> SOMETHING FOR EVERY MOMENT</p><h2>A little taste<br><em>of Māhira.</em></h2></div><div class="section-heading__aside"><p>Choose a menu to explore. All menus are vegetarian; please speak with your host about Jain-friendly and other dietary needs.</p></div></div>
-        <div class="menu-tabs" role="tablist" aria-label="Dining menu categories" data-menu-tabs>
-          <button type="button" role="tab" id="tab-mewari" aria-controls="panel-mewari" aria-selected="true" data-menu-tab="mewari">The Mewari table <span>01</span></button>
-          <button type="button" role="tab" id="tab-global" aria-controls="panel-global" aria-selected="false" data-menu-tab="global">From near & far <span>02</span></button>
-          <button type="button" role="tab" id="tab-tea" aria-controls="panel-tea" aria-selected="false" data-menu-tab="tea">Māhira high tea <span>03</span></button>
+        <div class="menu-section__heading reveal"><div><p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span> SOMETHING FOR THE TABLE</p><h2>A few things<br><em>we make with love.</em></h2></div><p>Our menu changes with the season and the mood of the kitchen. Choose a little inspiration below.</p></div>
+        <div class="menu-tabs" role="tablist" aria-label="Aangan menu categories" data-menu-tabs>
+          <button type="button" role="tab" id="tab-braj" aria-controls="panel-braj" aria-selected="true" data-menu-tab="braj">Braj favourites <span>01</span></button>
+          <button type="button" role="tab" id="tab-everyday" aria-controls="panel-everyday" aria-selected="false" data-menu-tab="everyday">Everyday at home <span>02</span></button>
+          <button type="button" role="tab" id="tab-chai" aria-controls="panel-chai" aria-selected="false" data-menu-tab="chai">Chai & something sweet <span>03</span></button>
         </div>
 
-        <div class="menu-panel" id="panel-mewari" role="tabpanel" aria-labelledby="tab-mewari" data-menu-panel="mewari">
-          <div class="menu-panel__intro"><span>01 / REGIONAL FAVOURITES</span><p>Recipes gathered from the kitchens of Mewar, served with the warmth of home.</p></div>
-          <div class="menu-list">
-            <article class="menu-item"><div><h3>Dal Baati Churma</h3><p>Slow-cooked panchmel dal, baked baati, jaggery churma</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span><span><i class="diet-dot diet-dot--gold"></i> JAIN ON REQUEST</span></div></div><strong>₹1,250</strong></article>
-            <article class="menu-item"><div><h3>Gatte ki Sabzi</h3><p>Gram-flour dumplings, spiced yoghurt gravy, fresh coriander</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span><span><i class="diet-dot diet-dot--olive"></i> LOCAL GRAINS</span></div></div><strong>₹980</strong></article>
-            <article class="menu-item"><div><h3>Ker Sangri</h3><p>Desert berries and beans, dried mango, toasted bajra roti</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span><span><i class="diet-dot diet-dot--gold"></i> JAIN FRIENDLY</span></div></div><strong>₹1,100</strong></article>
-            <article class="menu-item"><div><h3>Malai Ghewar</h3><p>Seasonal saffron cream, pistachio, rose petal honey</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span><span><i class="diet-dot diet-dot--olive"></i> SEASONAL</span></div></div><strong>₹720</strong></article>
+        <div class="menu-panel" id="panel-braj" role="tabpanel" aria-labelledby="tab-braj" data-menu-panel="braj">
+          <div class="menu-panel__intro"><span>01 / A TASTE OF HERE</span><p>Braj-style plates made for sharing, with recipes from our family kitchen.</p></div>
+          <div class="menu-items">
+            <article class="menu-item"><div><h3>Dubki Wale Aloo</h3><p>Slow-simmered potatoes, toasted spices, warm poori</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> VEGETARIAN</span><span><i class="food-dot food-dot--amber"></i> JAIN OPTION</span></div></div><strong>₹680</strong></article>
+            <article class="menu-item"><div><h3>Seasonal Saag & Makki Roti</h3><p>Greens from the market, hand-rolled corn roti, white butter</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> VEGETARIAN</span><span><i class="food-dot food-dot--rose"></i> SEASONAL</span></div></div><strong>₹720</strong></article>
+            <article class="menu-item"><div><h3>Paneer with Garden Herbs</h3><p>Soft paneer, coriander, ginger and a little smoke</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> VEGETARIAN</span><span><i class="food-dot food-dot--amber"></i> JAIN ON REQUEST</span></div></div><strong>₹840</strong></article>
+            <article class="menu-item"><div><h3>Makhan Mishri</h3><p>Freshly churned white butter, mishri and seasonal fruit</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> VEGETARIAN</span></div></div><strong>₹390</strong></article>
           </div>
         </div>
 
-        <div class="menu-panel" id="panel-global" role="tabpanel" aria-labelledby="tab-global" data-menu-panel="global" hidden>
-          <div class="menu-panel__intro"><span>02 / ALL-DAY KITCHEN</span><p>Familiar comforts and bright, thoughtful plates inspired by our travels.</p></div>
-          <div class="menu-list">
-            <article class="menu-item"><div><h3>Garden Heirloom Salad</h3><p>Market leaves, stone fruit, toasted seeds, lime dressing</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span><span><i class="diet-dot diet-dot--olive"></i> FARM SEASONAL</span></div></div><strong>₹850</strong></article>
-            <article class="menu-item"><div><h3>Wild Mushroom Khichdi</h3><p>Short-grain rice, forest mushrooms, aged ghee, crisp papad</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span></div></div><strong>₹1,150</strong></article>
-            <article class="menu-item"><div><h3>Wood-fired Paneer</h3><p>House paneer, charred tomato, coriander and warm kulcha</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span><span><i class="diet-dot diet-dot--gold"></i> JAIN ON REQUEST</span></div></div><strong>₹1,380</strong></article>
-            <article class="menu-item"><div><h3>Rose & Saffron Kulfi</h3><p>Slow-set malai, pistachio crumb, candied rose</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span></div></div><strong>₹620</strong></article>
+        <div class="menu-panel" id="panel-everyday" role="tabpanel" aria-labelledby="tab-everyday" data-menu-panel="everyday" hidden>
+          <div class="menu-panel__intro"><span>02 / THE EVERYDAY TABLE</span><p>Comforting plates for a slow lunch, early dinner or a day spent at home.</p></div>
+          <div class="menu-items">
+            <article class="menu-item"><div><h3>Dal, Rice & a Little Ghee</h3><p>Yellow lentils, cumin tadka, steamed basmati, crisp papad</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> VEGETARIAN</span><span><i class="food-dot food-dot--amber"></i> JAIN OPTION</span></div></div><strong>₹520</strong></article>
+            <article class="menu-item"><div><h3>Courtyard Garden Thali</h3><p>Two seasonal sabzis, dal, rice, roti, pickle and something sweet</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> PURE VEG</span><span><i class="food-dot food-dot--rose"></i> CHANGES DAILY</span></div></div><strong>₹890</strong></article>
+            <article class="menu-item"><div><h3>Stuffed Paratha & Curd</h3><p>Potato or paneer, house pickle, cooling yoghurt</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> VEGETARIAN</span></div></div><strong>₹460</strong></article>
+            <article class="menu-item"><div><h3>Sweet Lassi</h3><p>Thick yoghurt, a little saffron, crushed pistachio</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> VEGETARIAN</span></div></div><strong>₹260</strong></article>
           </div>
         </div>
 
-        <div class="menu-panel" id="panel-tea" role="tabpanel" aria-labelledby="tab-tea" data-menu-panel="tea" hidden>
-          <div class="menu-panel__intro"><span>03 / AFTERNOON TEA</span><p>Take the long way through the afternoon, with a pot of tea and something sweet.</p></div>
-          <div class="menu-list">
-            <article class="menu-item"><div><h3>House Chai & Nankhatai</h3><p>Cardamom tea, saffron shortbread, spiced cashews</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span></div></div><strong>₹950</strong></article>
-            <article class="menu-item"><div><h3>Lake Garden High Tea</h3><p>Petite sandwiches, cucumber chaat, seasonal tartlets</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span><span><i class="diet-dot diet-dot--olive"></i> SEASONAL</span></div></div><strong>₹1,850</strong></article>
-            <article class="menu-item"><div><h3>Single Estate Tea Flight</h3><p>Three Indian teas, served with honey, lemon and a little quiet</p><div class="menu-tags"><span><i class="diet-dot diet-dot--green"></i> VEGETARIAN</span></div></div><strong>₹1,200</strong></article>
+        <div class="menu-panel" id="panel-chai" role="tabpanel" aria-labelledby="tab-chai" data-menu-panel="chai" hidden>
+          <div class="menu-panel__intro"><span>03 / BETWEEN MEALS</span><p>The courtyard is always better with chai and a small plate of something lovely.</p></div>
+          <div class="menu-items">
+            <article class="menu-item"><div><h3>Masala Chai & Mathura Peda</h3><p>Fresh ginger, crushed cardamom and a local sweet</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> VEGETARIAN</span></div></div><strong>₹320</strong></article>
+            <article class="menu-item"><div><h3>Gur & Til Ladoo</h3><p>Jaggery, toasted sesame, ghee and a pinch of patience</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> VEGETARIAN</span><span><i class="food-dot food-dot--rose"></i> SEASONAL</span></div></div><strong>₹290</strong></article>
+            <article class="menu-item"><div><h3>Rose & Fennel Sherbet</h3><p>House-made, gently sweet and served cold</p><div class="menu-tags"><span><i class="food-dot food-dot--green"></i> VEGETARIAN</span></div></div><strong>₹240</strong></article>
           </div>
         </div>
-        <p class="menu-note">Menu and prices are illustrative for this website preview and may change with the season. All prices are in INR and exclusive of applicable taxes.</p>
+        <p class="menu-note">Menu and example prices shown in INR are illustrative. Please share allergies and dietary needs before your visit; daily dishes depend on the season.</p>
       </div>
     </section>
 
-    <section class="dining-private">
-      <div class="container dining-private__inner reveal"><div><p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> MAKE IT A MOMENT</p><h2>Your own table.<br><em>Your own time.</em></h2></div><div><p>Ask us about a private dinner by the water, a family thali in the courtyard or a Jain menu planned around your traditions.</p><button class="button button--outline-light" type="button" data-open-booking data-room-name="Dining enquiry">Plan a dining experience <span aria-hidden="true">↗</span></button></div></div>
-    </section>
+    <section class="table-note"><div class="container table-note__inner reveal"><div><p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span> THE TABLE IS BETTER SHARED</p><h2>Pull up a chair.<br><em>We’ll put the kettle on.</em></h2></div><div><p>Staying with us? Meals can be planned with your host, with Jain and other dietary needs discussed ahead of time.</p><button class="button button--cream" type="button" data-open-booking data-room-name="Dining enquiry">Ask about meals <span aria-hidden="true">↗</span></button></div></div></section>
   </main>
   <script src="scripts/site.js"></script>
 </body>

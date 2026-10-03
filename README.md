@@ -1,32 +1,34 @@
-# Māhira House — hotel website preview
+# Aangan House — Homestay website preview (Version 2)
 
-A lightweight, responsive multi-page website concept for a fictional heritage hotel on Lake Pichola in Udaipur. Built with plain HTML, CSS and JavaScript so it can be previewed and hosted as a static site without a build step or third-party packages.
+A fresh, responsive multi-page concept for a fictional family homestay in Braj, Mathura. Version 2 replaces the palace-hotel concept with a warmer, more lived-in homestay identity: deep plum, rose clay, saffron and neem green, original local-feeling AI imagery, and lightweight motion built with CSS and vanilla JavaScript.
 
 ## Pages
 
-- `index.html` — cinematic home page and stay availability form
-- `stays.html` — room cards, view/bed filters and interactive floorplan previews
-- `celebrations.html` — guest-capacity venue recommender and celebration enquiry form
-- `dining.html` — tabbed Mewari, all-day and high-tea menus with vegetarian/Jain/seasonal tags
-- `experiences.html` — lake, wellness and local experiences with a sample day itinerary
+- `index.html` — cinematic home page, date enquiry bar, rooms, small rituals and the family table
+- `stays.html` — three illustrative rooms, view/bed filters and room-layout previews
+- `our-home.html` — host story, homestay notes and FAQs
+- `experiences.html` — filterable at-home / out-in-Braj activities and a sample slow-day timeline
+- `dining.html` — tabbed vegetarian menus with Jain and seasonal tags
 
-## Run locally
+## Preview locally
 
-From the repository root, start any static server, for example:
+No package installation or build step is needed. From the repository root:
 
 ```bash
 python3 -m http.server 8080 --bind 0.0.0.0
 ```
 
-Then open `http://localhost:8080` (or the forwarded preview URL when running in a hosted workspace).
+Then open `http://localhost:8080` (or the hosted workspace preview URL).
+
+## Motion and interaction
+
+The site includes an animated image-led hero, staggered intro, scroll reveals, a reading-progress line, gentle parallax, hover transitions, a horizontal swipe gallery, responsive mobile navigation, room filters, native-dialog floorplan sketches, menu tabs and a stay enquiry modal. Reduced-motion preferences are respected.
 
 ## Before a real launch
 
-This is a design/demo property; the name, location, descriptions, room inventory, rates and menu are illustrative. Replace them with verified hotel information before publishing.
+Aangan House, its Mathura/Braj setting, host imagery, room inventory, rates, menu and experiences are illustrative. Replace demo details with verified information before publishing.
 
-- The stay and celebration forms validate entries and save a preview copy to this browser's `localStorage`. They do **not** send data to the hotel. Connect a booking engine / reservation inbox and a secure server before accepting live enquiries or payments.
-- Add the hotel's WhatsApp Business number (country code followed by digits, with no `+`, spaces or punctuation) to `HOTEL_WHATSAPP` near the top of `scripts/site.js`. Until configured, WhatsApp links open a share flow rather than a direct hotel chat.
-- No Razorpay/Cashfree keys or payment processing are included; integrate these through a secure server-side booking flow.
-- The local WebP images are original AI-generated concept imagery and should be replaced with approved property photography when available.
-
-Fonts load from Google Fonts when online; system fallbacks are provided.
+- Enquiry forms validate and save a preview record in the visitor's browser `localStorage`; they do **not** send information to a host. Connect a secure booking backend, hotel inbox or reservation engine before accepting live enquiries.
+- Add the real WhatsApp Business number to `HOST_WHATSAPP` near the top of `scripts/site.js` (country code plus digits, no `+`, spaces or punctuation). Until configured, the link opens WhatsApp's share flow rather than a direct chat.
+- No Razorpay/Cashfree payment gateway is connected. Add payment processing through a secure server-side reservation flow.
+- Replace the local WebP concept images with approved homestay photography when available. Google Fonts load online; local fallbacks are included.
