@@ -1,34 +1,52 @@
-# Aangan House — Homestay website preview (Version 2)
+# Mirāan Agra — luxury hotel demo
 
-A fresh, responsive multi-page concept for a fictional family homestay in Braj, Mathura. Version 2 replaces the palace-hotel concept with a warmer, more lived-in homestay identity: deep plum, rose clay, saffron and neem green, original local-feeling AI imagery, and lightweight motion built with CSS and vanilla JavaScript.
+A cinematic, mobile-first hotel website concept for **Mirāan Agra**, a fictional design-led stay inspired by the light, craft and layered history of Agra. The attached visuals were treated as creative direction only; the site uses original generated concept imagery and should not be mistaken for a live hotel or booking service.
+
+## Stack
+
+- Next.js App Router and React
+- Tailwind CSS 4 plus a responsive editorial stylesheet
+- GSAP + ScrollTrigger for reveals, parallax and counters
+- Lenis for smooth scrolling (automatically skipped when reduced motion is preferred)
+- Optimized local WebP concept imagery in `public/images/`
 
 ## Pages
 
-- `index.html` — cinematic home page, date enquiry bar, rooms, small rituals and the family table
-- `stays.html` — three illustrative rooms, view/bed filters and room-layout previews
-- `our-home.html` — host story, homestay notes and FAQs
-- `experiences.html` — filterable at-home / out-in-Braj activities and a sample slow-day timeline
-- `dining.html` — tabbed vegetarian menus with Jain and seasonal tags
+- `/` — full-bleed Agra hero, optional ambient video, sticky booking bar, rooms, celebrations, dining and city stories
+- `/rooms` — room cards, Taj / garden / heritage view filters, bed filters and illustrative interactive floorplans
+- `/weddings` — 100–500+ guest venue-fit calculator, browser-only event enquiry and a floating WhatsApp concierge link
+- `/dining` — tabbed vegetarian menu with green-dot vegetarian markers and Jain / seasonal labels
+- `/experiences` — Agra discovery cards and a sample, flexible day itinerary
 
-## Preview locally
+The responsive navigation, booking enquiry dialog, enquiry form feedback, menu tabs, room filters and gallery controls are interactive. The design honours `prefers-reduced-motion`.
 
-No package installation or build step is needed. From the repository root:
+## Run locally
 
 ```bash
-python3 -m http.server 8080 --bind 0.0.0.0
+npm install
+npm run dev
 ```
 
-Then open `http://localhost:8080` (or the hosted workspace preview URL).
+Open `http://localhost:3000`. Create an optimized production build with:
 
-## Motion and interaction
+```bash
+npm run build
+npm run start
+```
 
-The site includes an animated image-led hero, staggered intro, scroll reveals, a reading-progress line, gentle parallax, hover transitions, a horizontal swipe gallery, responsive mobile navigation, room filters, native-dialog floorplan sketches, menu tabs and a stay enquiry modal. Reduced-motion preferences are respected.
+## Optional configuration
 
-## Before a real launch
+Copy `.env.example` to `.env.local` if you want to configure optional integrations:
 
-Aangan House, its Mathura/Braj setting, host imagery, room inventory, rates, menu and experiences are illustrative. Replace demo details with verified information before publishing.
+- `NEXT_PUBLIC_HERO_VIDEO_URL` — an externally hosted, muted/looping MP4 or WebM. If unset, the site uses its local dusk image treatment.
+- `NEXT_PUBLIC_HOTEL_WHATSAPP` — WhatsApp Business number in international digits only (country code included; no `+`, spaces or punctuation). When empty, the prefilled button opens WhatsApp’s share flow rather than a direct hotel chat.
 
-- Enquiry forms validate and save a preview record in the visitor's browser `localStorage`; they do **not** send information to a host. Connect a secure booking backend, hotel inbox or reservation engine before accepting live enquiries.
-- Add the real WhatsApp Business number to `HOST_WHATSAPP` near the top of `scripts/site.js` (country code plus digits, no `+`, spaces or punctuation). Until configured, the link opens WhatsApp's share flow rather than a direct chat.
-- No Razorpay/Cashfree payment gateway is connected. Add payment processing through a secure server-side reservation flow.
-- Replace the local WebP concept images with approved homestay photography when available. Google Fonts load online; local fallbacks are included.
+## Prototype boundaries — read before launch
+
+This is a front-end demonstration, not a reservation system. Do not collect live guest data or payments with it.
+
+- Stay and event enquiries are only saved to the visitor’s browser `localStorage`; they are not sent to hotel staff or a server.
+- The Razorpay / UPI / NetBanking marks in the reservation dialog are **integration placeholders only**. No checkout, payment capture or payment credentials are configured. A live implementation needs a server-created Razorpay order, signature verification, webhook handling and appropriate data protection; never expose a Razorpay secret in client code.
+- Room availability, INR rates, venue capacities, amenities, itineraries and all property details are illustrative. Verify every operational claim with the hotel before publishing.
+- The visual assets are generated concept imagery. Replace them with approved, correctly licensed hotel photography before a real launch.
+- Google Fonts are loaded online; local serif and sans-serif fallbacks are included.
