@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useMemo, useState } from 'react';
 import { useBooking } from '@/components/BookingProvider';
+import useDialogAccessibility from '@/components/useDialogAccessibility';
 
 const rooms = [
   { id: 'taj-view-suite', name: 'Taj View Suite', descriptor: 'A front-row view, framed in stone.', image: '/images/miraan-taj-suite.webp', view: 'taj', bed: 'king', area: '68 m²', guests: 3, rate: '₹28,000', badge: 'THE SIGNATURE VIEW', plan: 'taj' },
@@ -12,14 +13,15 @@ const rooms = [
 ];
 
 function Floorplan({ room, onClose }) {
+  const dialogRef = useDialogAccessibility(Boolean(room), onClose, '.dialog-close');
   if (!room) return null;
   return (
     <div className="floorplan-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-      <section className="floorplan-panel" role="dialog" aria-modal="true" aria-labelledby="floorplan-title" data-lenis-prevent>
+      <section className="floorplan-panel" ref={dialogRef} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="floorplan-title" aria-describedby="floorplan-description" data-lenis-prevent>
         <button className="dialog-close" type="button" aria-label="Close floorplan" onClick={onClose}>×</button>
         <p className="eyebrow">ROOM DETAILS · {room.area}</p>
         <h2 id="floorplan-title">{room.name}</h2>
-        <p>An illustrative room layout. Exact furniture placement may vary by room.</p>
+        <p id="floorplan-description">An illustrative room layout. Exact furniture placement may vary by room.</p>
         <div className={`floorplan-drawing ${room.plan === 'family' ? 'floorplan-family' : ''}`}>
           <div className="plan-room plan-room--entry">ENTRY</div>
           <div className="plan-room plan-room--bed">{room.plan === 'family' ? 'KING BEDROOM' : 'SLEEPING AREA'}</div>

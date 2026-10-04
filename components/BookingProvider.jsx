@@ -1,6 +1,7 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useRef, useState } from 'react';
+import useDialogAccessibility from '@/components/useDialogAccessibility';
 
 const BookingContext = createContext(null);
 const HOTEL_WHATSAPP = process.env.NEXT_PUBLIC_HOTEL_WHATSAPP || '';
@@ -67,16 +68,13 @@ export function BookingProvider({ children }) {
     setForm((current) => ({ ...current, [name]: type === 'checkbox' ? checked : value }));
   };
 
+  const dialogRef = useDialogAccessibility(isOpen, closeBooking, 'input[name="name"]');
+  const successTitleRef = useRef(null);
   useEffect(() => {
-    if (!isOpen) return undefined;
-    document.body.classList.add('modal-open');
-    const onKeyDown = (event) => { if (event.key === 'Escape') closeBooking(); };
-    window.addEventListener('keydown', onKeyDown);
-    return () => {
-      document.body.classList.remove('modal-open');
-      window.removeEventListener('keydown', onKeyDown);
-    };
-  }, [isOpen]);
+    if (!success || !isOpen) return undefined;
+    const frame = window.requestAnimationFrame(() => successTitleRef.current?.focus());
+    return () => window.cancelAnimationFrame(frame);
+  }, [success, isOpen]);
 
   const submit = (event) => {
     event.preventDefault();
@@ -102,13 +100,13 @@ export function BookingProvider({ children }) {
       {children}
       {isOpen && (
         <div className="booking-overlay" onMouseDown={(event) => { if (event.target === event.currentTarget) closeBooking(); }}>
-          <section className="booking-dialog" role="dialog" aria-modal="true" aria-labelledby="booking-title" data-lenis-prevent>
+          <section className="booking-dialog" ref={dialogRef} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="booking-title" aria-describedby={success ? 'booking-success-description' : 'booking-dialog-intro'} data-lenis-prevent>
             <button className="dialog-close" type="button" aria-label="Close booking enquiry" onClick={closeBooking}>×</button>
             {!success ? (
               <>
                 <p className="eyebrow">MIRĀAN AGRA · RESERVATIONS</p>
                 <h2 id="booking-title">Make room for<br /><em>a little wonder.</em></h2>
-                <p className="booking-dialog-intro">Tell us the shape of your stay. Our reservations team can help with dates, rooms and the details that make the trip yours.</p>
+                <p className="booking-dialog-intro" id="booking-dialog-intro">Tell us the shape of your stay. Our reservations team can help with dates, rooms and the details that make the trip yours.</p>
                 <form className="booking-form" onSubmit={submit}>
                   <div className="booking-form-row">
                     <label>Your name<input name="name" value={form.name} onChange={update} autoComplete="name" placeholder="Full name" required /></label>
@@ -132,8 +130,8 @@ export function BookingProvider({ children }) {
               <div className="booking-success">
                 <span className="booking-success-mark" aria-hidden="true">✓</span>
                 <p className="eyebrow">YOUR STAY, IN THE MAKING</p>
-                <h2 id="booking-title">Enquiry noted.</h2>
-                <p>{form.name}, your {form.request.toLowerCase()} enquiry for {form.guests} guest{form.guests === '1' ? '' : 's'} from {prettyDate(form.arrival)} to {prettyDate(form.departure)} is saved in this demo.</p>
+                <h2 id="booking-title" ref={successTitleRef} tabIndex={-1}>Enquiry noted.</h2>
+                <p id="booking-success-description">{form.name}, your {form.request.toLowerCase()} enquiry for {form.guests} guest{form.guests === '1' ? '' : 's'} from {prettyDate(form.arrival)} to {prettyDate(form.departure)} is saved in this demo.</p>
                 <p>Nothing has been sent to the hotel yet. Connect a booking backend before taking live reservations.</p>
                 <div className="booking-success-actions"><a href={whatsAppHref} target="_blank" rel="noreferrer">{HOTEL_WHATSAPP ? 'Continue with Mirāan on WhatsApp ↗' : 'Continue in WhatsApp ↗'}</a><button className="text-link" type="button" onClick={closeBooking}>Back to the site <span>↗</span></button></div>
               </div>

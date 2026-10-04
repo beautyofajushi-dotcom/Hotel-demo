@@ -48,7 +48,7 @@ export default function WeddingCalculator() {
       <form className="event-form mt-9 border-t border-ink/15 pt-7" onSubmit={submit}>
         <div className="event-form-row"><label>Your name<input name="name" placeholder="Full name" required /></label><label>Email or phone<input name="contact" placeholder="How can we reach you?" required /></label></div>
         <div className="event-form-row"><label>Celebration date<input name="date" type="date" min={today || undefined} required /></label><label>Occasion<select name="occasion"><option>Wedding celebration</option><option>Mehendi / sangeet</option><option>Family gathering</option><option>Private dinner</option></select></label></div>
-        <div className="flex flex-wrap items-center gap-3"><button className="button-gold" type="submit">Save event enquiry <span className="button-arrow">↗</span></button><button className="button-outline !min-h-[48px] !border-ink/30 !text-ink hover:!text-ink" type="button" onClick={() => openBooking({ request: 'Wedding enquiry', guests })}>Plan a room block <span className="button-arrow">↗</span></button></div>
+        <div className="flex flex-wrap items-center gap-3"><button className="button-gold" type="submit">Save event enquiry <span className="button-arrow">↗</span></button><button className="button-outline !min-h-[48px] !border-ink/30 !text-ink hover:!text-ink" type="button" onClick={() => openBooking({ request: 'Wedding enquiry', guests: 2 })}>Plan a room block <span className="button-arrow">↗</span></button></div>
         <p className={`event-status ${status.startsWith('Your') ? 'is-success' : ''}`} aria-live="polite">{status}</p>
       </form>
     </div>
